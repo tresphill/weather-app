@@ -1,43 +1,35 @@
+
+
+
+
+
 async function getApi() {
     const apiKey = '0bd53a711178ff89e0b82fd78dc9c36a';
-    const zipCode = '40517';
+    const zipCode = ;
 
-    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + '&appid=' + apiKey
-    console.log(apiUrl);
+    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + '&appid=' + apiKey;
+
     try {
-        const response = await axios.get(apiUrl)
+        const response = await axios.get(apiUrl);
 
         if (response.status === 200) {
-            console.log(response);
-        }
-        else {
+            const data = response.data;
+
+            // extracti data from the API response
+            const location = response.data.name;
+            const temperature = (response.data.main.temp);
+            const weatherConditions = response.data.weather.description;
+
+            // Update the HTML elements with the data
+            document.getElementById('location').textContent = location;
+            document.getElementById('temperature').textContent = temperature;
+            document.getElementById('weather-conditions').textContent = weatherConditions;
+        } else {
             console.log('API request returned a non-200 code:', response.status);
         }
-    }
-    catch (error) {
-        console.log('Error fetching weather data:', error)
+    } catch (error) {
+        console.log('Error fetching weather data:', error);
     }
 }
+
 getApi();
-
-document.body.onclick = addElement("div", "text-primary");
-
-function addElement(tag, className) {
-    let city = document.createElement(city);
-    let conditions = document.createElement(conditions);
-    let clouds = document.createElement(clouds)
-}
-
-
-
-
-// // need an element for displaying city
-// response.data.main
-
-// // need an element for displaying conditions 
-// response.data.weather
-// response.data.wind
-
-// // need an element for displaying image relative to conditions
-
-// // need an element for displaying error message if invalid zip code
