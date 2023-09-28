@@ -8,7 +8,7 @@ async function getApi() {
         const response = await axios.get(apiUrl)
 
         if (response.status === 200) {
-            console.log('Data successfully retrieved from API');
+            console.log(response);
         }
         else {
             console.log('API request returned a non-200 code:', response.status);
@@ -20,3 +20,24 @@ async function getApi() {
 }
 getApi();
 
+document.body.onclick = addElement("div", "text-primary");
+
+function addElement(tag, className) {
+    let city = document.createElement(city);
+    let conditions = document.createElement(conditions);
+    let clouds = document.createElement(clouds)
+}
+
+
+
+
+// // need an element for displaying city
+// response.data.main
+
+// // need an element for displaying conditions 
+// response.data.weather
+// response.data.wind
+
+// // need an element for displaying image relative to conditions
+
+// // need an element for displaying error message if invalid zip code
