@@ -5,8 +5,6 @@
 
 async function getApi() {
     const apiKey = '0bd53a711178ff89e0b82fd78dc9c36a';
-    const zipCode = ;
-
     const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + '&appid=' + apiKey;
 
     try {
@@ -15,7 +13,7 @@ async function getApi() {
         if (response.status === 200) {
             const data = response.data;
 
-            // extracti data from the API response
+            // extracting data from the API response
             const location = response.data.name;
             const temperature = (response.data.main.temp);
             const weatherConditions = response.data.weather.description;
