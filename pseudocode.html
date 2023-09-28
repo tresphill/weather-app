@@ -1,0 +1,53 @@
+<!-- DESCRIPTION
+
+For this project, we will be using an external API to retrieve weather data to create a webpage that prompts users to enter a zip code, then displays current weather information for that location or a friendly error message if the zip code is not found. -->
+
+<!-- REQUIREMENTS
+To complete the assignment, you must complete the following:
+Use https://openweathermap.org/’s API to fetch weather data.
+Allow the user to enter their location (zip code is probably easiest) and press a button to load the weather.
+Run an onClick or onSubmit that executes an Axios GET request to retrieve weather data from the API.
+Handle successful and unsuccessful attempts
+If the request is successful, display the following in a 'mobile app' format:
+City name
+Current weather conditions
+Current temperature in Kelvin, Fahrenheit, and Celsius
+A unique image, decided by the current temperature (The API has icons built-in, be sure to read the docs)
+If the request is unsuccessful, display a specific error message such as "Invalid Zip Code" or anything else that might come back from the API.
+Allow the user to continue entering new zip codes to get new weather data.
+Design should include a RESPONSIVE layout utilizing Bootstrap’s layout classes that works on both mobile and desktop (with different layouts) and applies atomic design principles for a professional looking presentation. -->
+
+
+    <!-- Code references
+    https://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key} -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script defer src="./js/main.js"></script> -->
+
+
+    <!-- Understanding the problem
+its a weather application that allows the user to enter their zip code and it displays the weather for their location
+i will need an input field for entering zip along with a button to getWeather
+the information will be retrieved using an API, not fetch
+i will need a display box containing info such as City, Temps (kelvin, Fahrenheit, Celsius), the condition of the weather at current time,
+and any other info such an image relative to the weathers conditions in that city
+i will also need defensive programming such as an error message if zip code is incorrect, zip code is not valid(only for US) -->
+
+
+    <!-- Functionality
+basic html file with single div, adding nesting divs to be populated by JS - .createElement 
+css to style as needed, not as important right now
+use API key(0bd53a711178ff89e0b82fd78dc9c36a) to populate city, temp, weather conditions, images, error messages
+    i. axios.get to retrieve data 
+    ii. store data in state and render?
+    iii. onCLick button handler to render weather info
+    iiii. if statements for error messages?
+     -->
