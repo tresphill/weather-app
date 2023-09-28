@@ -12,4 +12,22 @@ body{
 .card{
     width: 50%;
     max-width: 470px;
+    background: linear-gradient(135deg, #edfe00, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    border-radius: 15px;
+    font-size: 20px;
 }
