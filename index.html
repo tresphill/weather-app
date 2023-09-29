@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Weather App</title>
 </head>
+
 <body>
 
     <div class="card">
         <div class="search">
-            <input type="text place" placeholder="Enter city name">
-            <button>
-                <img src="/images/search-outline.svg">
-            </button>
+            <input type="text place" id="zipCode" placeholder="Enter zip code">
+            <button id="btnClick">Enter</button>
+        </div>
+        <div class="weather">
+            <img src="" id="imageImg" alt="">
+            <h1 id="temp"></h1>
+            <h2 id="city"></h2>
+            <div class="details">
+                <div class="col">
+                    <img id="humidityImg" src="" alt="">
+                    <div>
+                        <p>Humidity</p>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img id="windImg" src="" alt="">
+                    <div>
+                        <p>Wind Speed</p>
+                        <p id="wind"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src='main.js'></script>
 </body>
+
 </html>
