@@ -1,6 +1,6 @@
-
-
-
+let weather = document.getElementById('details');
+let temperature = document.getElementById('h1');
+let location = document.getElementById('h2');
 
 
 async function getApi() {
@@ -18,7 +18,7 @@ async function getApi() {
             const temperature = (response.data.main.temp);
             const weatherConditions = response.data.weather.description;
 
-            // Update the HTML elements with the data
+            // uppdate HTML elements with the data retrieved from API 
             document.getElementById('location').textContent = location;
             document.getElementById('temperature').textContent = temperature;
             document.getElementById('weather-conditions').textContent = weatherConditions;
