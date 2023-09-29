@@ -25,7 +25,7 @@ let state = {
 
 button.addEventListener('click', function getApi() {
     // placed these variables in the function, they were not working before
-    let zipCodeValue = zipCode.value; 
+    let zipCodeValue = zipCode.value;
     let imageImg = document.getElementById('imageImg')
     let humidityImg = document.getElementById('humidityImg');
     let windImg = document.getElementById('windImg');
@@ -50,13 +50,32 @@ button.addEventListener('click', function getApi() {
             // if statements?
             // openweathermap has selection of wind conditions
             // if weather = response from api, return nested image
+
             if (response.data.weather[0].main === 'Clouds') {
                 imageImg.src = '/images/clouds.png';
                 humidityImg.src = '/images/humidity.png';
                 windImg.src = '/images/wind.png';
             } else if (response.data.weather[0].main === 'Clear') {
                 imageImg.src = '/images/clear.png';
-            } 
+                humidityImg.src = '/images/humidity.png';
+                windImg.src = '/images/wind.png';
+            } else if (response.data.weather[0].main === 'Thunderstorm'){
+                imageImg.src = '/images/clear.rain.png';
+                humidityImg.src = '/images/humidity.png';
+                windImg.src = '/images/wind.png';
+            } else if (response.data.weather[0].main === 'Drizzle'){
+                imageImg.src = '/images/clear.rain.png';
+                humidityImg.src = '/images/humidity.png';
+                windImg.src = '/images/wind.png';
+            } else if (response.data.weather[0].main === 'Rain'){
+                imageImg.src = '/images/clear.rain.png';
+                humidityImg.src = '/images/humidity.png';
+                windImg.src = '/images/wind.png';
+            } else if (response.data.weather[0].main === 'Snow'){
+                imageImg.src = '/images/clear.snow.png';
+                humidityImg.src = '/images/humidity.png';
+                windImg.src = '/images/wind.png';
+            }
 
             // uppdate HTML elements with the data retrieved from API
             temperature.innerText = state.temperature + '°';
